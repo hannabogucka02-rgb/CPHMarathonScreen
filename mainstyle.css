@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+
+.alexandria {
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    --fadeblack: #222222;
+    --yellow: #FAE100;
+    --buttongray: #E5E5E5;
+    --textgray: #868686;
+    font-family: "Alexandria";
+    background: #B8B4B4;
+
+    /*  CALCULATED TYPOGRAPHY  */
+    --fs-xs: 0.625rem;
+  --fs-sm: 0.75rem;
+  --fs-md: 0.875rem;
+  --fs-lg: 1rem;
+  --fs-xl: 1.125rem;
+  --fs-xxl: 1.375rem;
+  --fs-xxxl: 1.75rem;
+
+    /*  CALCULATED SPACING  */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 0.75rem;
+    --space-lg: 1rem;
+    --space-xl: 1.5rem;
+
+    /*  CALCULATED RADIUS  */
+    --radius-sm: 0.75rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.5rem;
+    --radius-xl: 2rem;
+}
+
+/*MAIN PAGE*/
+.body {
+    background-image: url("images/mainbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+}
+
+.top {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    gap: 3.5rem;
+    justify-content: right;
+}
+
+.logo {
+    width: 20rem;
+}
+
+.frame1 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+.frame2 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+.line {
+    height: 6rem;
+}
+
+.racecontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.startcontainer {
+    display: flex;
+    padding-bottom: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.raceday {
+    color: #868686;
+    font-size: var(--fs-md);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+.date {
+    color: #000;
+    font-size: var(--fs-xxl);
+    font-weight: 600;
+}
+
+.time {
+    color: #868686;
+    font-size: var(--fs-xl);
+    font-weight: 600;
+    letter-spacing: 0.13333rem;
+}
+
+.buttoncontainer {
+    display: flex;
+    width: 7rem;
+    padding-bottom: 1.25rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.41667rem;
+    flex-shrink: 0;
+}
+
+.lbutton {
+    display: flex;
+    padding: 0.5rem var(--space-lg) 0.54167rem var(--space-lg);
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    gap: var(--space-xs);
+    border-radius: 2.5rem;
+    background: #E5E5E5;
+    color: #000;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+}
+
+.icon {
+    width: 1rem;
+}
+
+/*tabs*/
+.cards {
+    display: flex;
+    width: 80rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4rem;
+}
+
+.card {
+    width: 17rem;
+    height: 19rem;
+    background: white;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    filter: drop-shadow(-10px 10px 10px rgba(0, 0, 0, 0.50));
+    display: flex;
+    flex-direction: column;
+}
+
+.cardimg {
+    width:100%;
+}
+
+.content {
+    display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+gap: 1.04167rem;
+margin-top: -2.5rem;
+
+}
+
+.icon2 {
+    width: 3.33333rem;
+height: 3.33333rem;
+aspect-ratio: 1/1;
+}
+
+.text1 {
+    color: #000;
+text-align: center;
+font-size: var(--fs-xxl);
+font-weight: 600;
+}
+
+.text2 {
+    color: #000;
+font-size: var(--fs-md);
+font-weight: 400;
+}
+
+.card a {text-decoration: none;}
+
+/*footer*/
+
+.footerbox {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 5rem;
+    width: 44rem;
+    margin-left: 2.6rem;
+}
+
+.footer {
+    color: #FFF;
+font-size: var(--fs-sm);
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 29rem;
+margin-top: 3rem;
+}
+
+.frame3 {
+    display: flex;
+width: 15rem;
+flex-direction: column;
+align-items: center;
+gap: 0.79167rem;
+}
+
+.touchicon {
+    width: 4.16667rem;
+height: 3.47254rem;
+}
+
+.textfooter {
+    color: #FFF;
+text-align: center;
+font-size: var(--fs-md);
+font-weight: 600;
+}
+
+.text4 {
+    font-size: var(--fs-md);
+    font-weight: 600;
+}
+

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportation</title>
+    <link rel="stylesheet" href="mapstyle.css">
+</head>
+
+<body class="body">
+    <main class="bigframe">
+        <section class="topcontainer">
+            <div class="backcontainer">
+                <button class="backbutton" onclick="history.back()">く Back</button>
+            </div>
+            <div class="titlecontainer">
+                <div class="titlecontent">
+                    <div class="text1">MAP</div>
+                    <div class="text2">Explore the city and all it has to offer</div>
+                </div>
+            </div>
+            <div class="racecontainer">
+                <img class="line" src="images/line.svg">
+                <div class="racecontent">
+                    <div class="text3">RACE DAY</div>
+                    <div class="text4">May 9, 2027</div>
+                    <div class="text5">9:30 AM (CET)</div>
+                </div>
+            </div>
+            <div class="startcontainer">
+                <img class="line" src="images/line.svg">
+                <div class="startcontents">
+                    <div class="text3">STARTS IN</div>
+                    <div id="demo" class="text4"></div>
+                </div>
+            </div>
+            <div class="buttoncontainer">
+                <div class="dropdown">
+                    <button type="button" class="buttoncontents collapsible" id="languageButton">
+                        <img class="icon" src="images/languageicon.png">
+                        <div class="selected-language">English</div>
+                        <img class="arrow" src="images/arrow.svg">
+                    </button>
+                    <div class="content" id="languageMenu">
+                        <button class="language-option">🇩🇰 Danish</button>
+                        <button class="language-option">🇩🇪 German</button>
+                        <button class="language-option">🇪🇸 Spanish</button>
+                        <button class="language-option">🇵🇱 Polish</button>
+                        <button class="language-option">🇸🇰 Slovak</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sidecontainer">
+            <a href="main.html" class="logocontainer"><img class="logo" src="images/smalllogo.png"></a>
+            <a href="transportation.html" class="mapcontainer">
+                <img class="sideicon" src="images/whitetransporticon.png">
+                <div style="font-size: 0.75rem;">Transportation</div>
+            </a>
+            <div class="transcontainer">
+                <img class="transicon" src="images/mapicon2.png">
+            </div>
+            <a href="marathon.html" class="mapcontainer">
+                <img class="sideicon" src="images/whitemarathon.svg">
+                <div style="font-size: 0.75rem">Marathon</div>
+            </a>
+        </section>
+        <section>
+            <div class="youareherecontainer">
+                <div class="text9">YOU ARE HERE</div>
+                <div class="locationframe">
+                    <img class="locationicon" src="images/location.png">
+                    <div class="text8" style="color:black">Rantzausgade 41-37, Nørrebro</div>
+                </div>
+                <div class="infoframes">
+                    <div class="text6">START OF THE RACE</div>
+                    <div class="text7">⚲ Trianglen ➡️</div>
+                    <div class="text8">37 min (2,7 km)</div>
+                </div>
+                <div class="infoframes">
+                    <div class="text6">CLOSEST METRO STATION</div>
+                    <div class="text7">⚲ Forum ➡️</div>
+                    <div class="text8">9 min (650 m)</div>
+                </div>
+                <div class="infoframes">
+                    <div class="text6">CLOSEST RACE CHECKPOINT</div>
+                    <div class="text7">⚲ Ørstedsparken ➡️</div>
+                    <div class="text8">19 min (1,4 km)</div>
+                </div>
+                <div class="layerscontainer">
+                    <div class="maplayers">
+                        <div class="text9">MAP LAYERS</div>
+                        <div class="text8" style="color:black">Show on map:</div>
+                    </div>
+                    <div class="chooseframe">
+                        <div class="maplayersframes">
+                            <img class="img" src="images/tick.svg">
+                            <img class="img" src="images/marathonroute.svg">
+                            <div class="text10">Marathon route</div>
+                        </div>
+                        <div class="maplayersframes">
+                            <img class="img" src="images/untick.svg">
+                            <img class="img" src="images/toilets.svg">
+                            <div class="text10">Toilets</div>
+                        </div>
+                        <div class="maplayersframes">
+                            <img class="img" src="images/untick.svg">
+                            <img class="img" src="images/attractions.svg">
+                            <div class="text10">Attractions</div>
+                        </div>
+                        <div class="maplayersframes">
+                            <img class="img" src="images/tick.svg">
+                            <img class="img" src="images/metrostations.svg">
+                            <div class="text10">Metro stations</div>
+                        </div>
+                        <div class="maplayersframes">
+                            <img class="img" src="images/untick.svg">
+                            <img class="img" src="images/metrolines.png">
+                            <div class="text10">Metro lines</div>
+                        </div>
+                        <div class="maplayersframes">
+                            <img class="img" src="images/untick.svg">
+                            <img class="img" src="images/blockedroutes.svg">
+                            <div class="text10">Blocked routes</div>
+                        </div>
+                    </div>
+                    <div class="searchframe">
+                        <div class="text11">🔍︎ Search for a location...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="map">
+            <img id="mapImage" src="images/bigmap.png">
+            <div class="mappopup" id="mapPopup">
+                <div class="popup-title">Nørreport Metro Station</div>
+                <div class="popup-info"> 22 min (1.6 km) </div>
+                <button class="popupbutton" id="takeMeThereBtn"> Take me there </button>
+            </div>
+            <div class="navigationpopup" id="navigationPopup">
+                <div class="text9">ACTIVE NAVIGATION</div>
+                <div class="navsection">
+                    <div class="text7">FROM:</div>
+                    <div class="text55">Rantzausgade 41-37, Nørrebro</div>
+                </div>
+                <div class="navsection">
+                    <div class="text7">TO:</div>
+                    <div class="text55"> Nørreport Metro Station</div>
+                </div>
+                <div class="navsection">
+                    <div class="text55">🕒 22 min (1.6 km)</div>
+                </div>
+                <div class="navsection">
+                    <div class="text4">SCHEDULES</div>
+                </div>
+                <div class="iconcontainer3">
+                    <button class="iconinside">
+                        <div class="iconrow">
+                            <img class="icon2" src="images/bus.png">
+                            <img class="arrowicon2" src="images/arrowforward.png">
+                        </div>
+                        <div class="textunder">BUS</div>
+                    </button>
+                    <button class="iconinside">
+                        <div class="iconrow">
+                            <img class="icon2" src="images/metro.png">
+                            <img class="arrowicon2" src="images/arrowforward.png">
+                        </div>
+                        <div class="textunder">METRO</div>
+                    </button>
+                    <button class="iconinside">
+                        <div class="iconrow">
+                            <img class="icon2" src="images/train.png">
+                            <img class="arrowicon2" src="images/arrowforward.png">
+                        </div>
+                        <div class="textunder">TRAIN</div>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="infocontainer">
+            <div class="zoominfo">
+                <div class="text12">Zoom on the map to see the nearest stops</div>
+                <img class="infoicons" src="images/zoomin.png">
+            </div>
+            <div class="clickinfo">
+                <div class="text12">Or simply click on the location you want to go to to see avaible routes</div>
+                <img class="infoicons" src="images/blacktouchicon.png">
+            </div>
+        </section>
+        <section class="infocontainer2">
+            <div class="startcontainer">
+                <div class="startcontent">
+                    <div class="text4">⚲ Trianglen ➡️</div>
+                    <div class="text5">Østerbro</div>
+                </div>
+            </div>
+            <div class="racecontainer">
+                <img class="line" src="images/line.svg">
+                <div class="racecontent">
+                    <div class="text3">DISTANCE</div>
+                    <div class="text4">42.2 KILOMETERS</div>
+                    <div class="text5">26.2 MILES</div>
+                </div>
+            </div>
+            <div class="racecontainer">
+                <img class="line" src="images/line.svg">
+                <div class="racecontent">
+                    <div class="text3">LASTS FROM - TO</div>
+                    <div class="text4">2H 5M - 6H 30M</div>
+                    <div class="text5">9:30 AM - 4PM</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="language.js"></script>
+</body>
+
+</html>

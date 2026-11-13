@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marathon - Statistics</title>
+    <link rel="stylesheet" href="statistics.css">
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body class="kiosk">
+    <main class="bigframe">
+        <!-- ---------- TOP SECTION (same as what.html / where.html) ---------- -->
+        <section class="topcontainer">
+            <div class="backcontainer">
+                <button class="backbutton" onclick="history.back()">く Back</button>
+            </div>
+            <div class="titlecontainer">
+                <div class="titlecontent">
+                    <div class="text1">MARATHON ➜ STATISTICS</div>
+                </div>
+            </div>
+            <div class="racecontainer">
+                <img class="line" src="images/line.svg">
+                <div class="racecontent">
+                    <div class="text3">RACE DAY</div>
+                    <div class="text4">May 9, 2027</div>
+                    <div class="text5">9:30 AM (CET)</div>
+                </div>
+            </div>
+            <div class="startcontainer">
+                <img class="line" src="images/line.svg">
+                <div class="startcontents">
+                    <div class="text3">STARTS IN</div>
+                    <div id="demo" class="text4"></div>
+                </div>
+            </div>
+            <div class="buttoncontainer">
+                <div class="dropdown">
+                    <button type="button" class="buttoncontents collapsible" id="languageButton">
+                        <img class="icon" src="images/languageicon.png">
+                        <div class="selected-language">English</div>
+                        <img class="arrow" src="images/arrow.svg">
+                    </button>
+                    <div class="content" id="languageMenu">
+                        <button class="language-option">🇩🇰 Danish</button>
+                        <button class="language-option">🇩🇪 German</button>
+                        <button class="language-option">🇪🇸 Spanish</button>
+                        <button class="language-option">🇵🇱 Polish</button>
+                        <button class="language-option">🇸🇰 Slovak</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------- SIDEBAR SECTION (same as what.html / where.html) ---------- -->
+        <section class="sidecontainer">
+            <a href="main.html" class="logocontainer">
+                <img class="logo" src="images/smalllogo.png"></a>
+            <a href="transportation.html" class="mapcontainer">
+                <img class="sideicon" src="images/whitetransporticon.png">
+                <div style="font-size: 0.75rem">Transportation</div>
+            </a>
+            <a href="map.html" class="mapcontainer">
+                <img class="sideicon" src="images/whitemap.svg">
+                <div style="font-size: 0.75rem">Map</div>
+            </a>
+            <div class="transcontainer">
+                <img class="transicon" src="images/marathonicon.png">
+            </div>
+        </section>
+
+        <!-- ---------- STATS AREA: everything right of the sidebar, scaled to fit the screen ---------- -->
+        <section class="statsarea">
+        <div class="stage">
+
+        <!-- ---------- LEFT CARD: race in numbers ---------- -->
+        <section class="card numbers">
+            <h2>RACE 2025 IN NUMBERS</h2>
+            <p class="card-sub">Copenhagen Marathon, Sunday 11 May 2025</p>
+
+            <div class="kpi-grid">
+                <div class="kpi">
+                    <span class="kpi-number">20,965</span>
+                    <span class="kpi-label">Registered runners</span>
+                    <span class="kpi-note">Signed up for the 2025 race</span>
+                </div>
+                <div class="kpi dark">
+                    <span class="kpi-number">18,508</span>
+                    <span class="kpi-label">Finishers</span>
+                    <span class="kpi-note">Crossed the line at Øster Allé</span>
+                </div>
+                <div class="kpi">
+                    <span class="kpi-number">119</span>
+                    <span class="kpi-label">Nations</span>
+                    <span class="kpi-note">Runners from all over the world</span>
+                </div>
+                <div class="kpi">
+                    <span class="kpi-number">37%</span>
+                    <span class="kpi-label">First marathon</span>
+                    <span class="kpi-note">Ran 42.195 km for the first time</span>
+                </div>
+            </div>
+
+            <div class="inner-card who">
+                <h3>WHO RUNS COPENHAGEN</h3>
+                <div class="split-bar">
+                    <span class="split danish" style="width: 62.7%">Danish 62.7%</span>
+                    <span class="split international" style="width: 37.3%">International 37.3%</span>
+                </div>
+                <p>Almost 4 in 10 runners travel to Copenhagen from abroad.</p>
+            </div>
+        </section>
+
+        <!-- ---------- RIGHT CARD: records + facts ---------- -->
+        <section class="card records">
+            <div class="card-head">
+                <div>
+                    <h2>COURSE RECORDS</h2>
+                    <p class="card-sub">Fastest times in Copenhagen vs the world records</p>
+                </div>
+                <span class="chip">Bars start at 1:45:00</span>
+            </div>
+
+            <div class="inner-card record-row">
+                <span class="code">MEN</span>
+                <span class="divider"></span>
+                <div class="bars">
+                    <div class="bar-line">
+                        <span class="bar-label">Copenhagen</span>
+                        <span class="track"><span class="bar yellow" data-time="2:08:23"></span></span>
+                        <span class="bar-time">2:08:23</span>
+                    </div>
+                    <div class="bar-line">
+                        <span class="bar-label">World record</span>
+                        <span class="track"><span class="bar grey" data-time="2:00:35"></span></span>
+                        <span class="bar-time">2:00:35</span>
+                    </div>
+                    <p class="bar-note">World record: Kelvin Kiptum, Chicago 2023</p>
+                </div>
+            </div>
+
+            <div class="inner-card record-row">
+                <span class="code">WOMEN</span>
+                <span class="divider"></span>
+                <div class="bars">
+                    <div class="bar-line">
+                        <span class="bar-label">Copenhagen</span>
+                        <span class="track"><span class="bar yellow" data-time="2:23:14"></span></span>
+                        <span class="bar-time">2:23:14</span>
+                    </div>
+                    <div class="bar-line">
+                        <span class="bar-label">World record</span>
+                        <span class="track"><span class="bar grey" data-time="2:09:56"></span></span>
+                        <span class="bar-time">2:09:56</span>
+                    </div>
+                    <p class="bar-note">World record: Ruth Chepngetich, Chicago 2024</p>
+                </div>
+            </div>
+
+            <h2 class="facts-title">DID YOU KNOW?</h2>
+            <div class="facts">
+                <div class="inner-card fact">
+                    <span class="accent"></span>
+                    <h3>1980</h3>
+                    <p>The first race was run in 1980, organised by Sparta Athletics &amp; Running.</p>
+                </div>
+                <div class="inner-card fact">
+                    <span class="accent"></span>
+                    <h3>6 hours</h3>
+                    <p>Time limit to finish. Every finisher gets a medal.</p>
+                </div>
+                <div class="inner-card fact">
+                    <span class="accent"></span>
+                    <h3>42.195 km</h3>
+                    <p>Start and finish at Øster Allé by Fælledparken.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------- BOTTOM BANNER ---------- -->
+        <section class="banner">
+            <div class="banner-text">
+                <span class="banner-kicker">TOGETHER IN 2025 WE RAN</span>
+                <span class="banner-number">794,221 KM</span>
+                <span class="banner-sub">That is 19.8 times around the Earth.</span>
+            </div>
+
+            <div class="earth">
+                <svg width="150" height="150" viewBox="0 0 150 150" fill="none" aria-hidden="true">
+                    <circle cx="75" cy="75" r="72" stroke="#fff" stroke-width="4" />
+                    <ellipse cx="75" cy="75" rx="35" ry="72" stroke="#fff" stroke-width="4" />
+                    <path d="M10 45H140M3 75H147M10 105H140" stroke="#fff" stroke-width="4" />
+                </svg>
+                <span class="earth-badge">19.8&times;</span>
+            </div>
+
+            <img class="qr" src="images/qr-results.svg" alt="QR code to the Copenhagen Marathon website">
+            <p class="qr-text"><strong>SCAN THE QR CODE</strong><br>to see all 2025 results and find your own finish time.</p>
+            <svg class="phone" width="70" height="120" viewBox="0 0 70 120" fill="none" aria-hidden="true">
+                <rect x="2" y="2" width="66" height="116" rx="12" fill="#FAE100" stroke="#000" stroke-width="3" />
+                <rect x="24" y="10" width="22" height="4" rx="2" fill="#000" />
+                <path d="M20 44V36H28M42 36H50V44M50 76V84H42M28 84H20V76" stroke="#000" stroke-width="3" />
+                <rect x="28" y="52" width="14" height="16" stroke="#000" stroke-width="3" />
+            </svg>
+        </section>
+
+        </div>
+        </section>
+    </main>
+
+    <script src="popup.js"></script>
+    <script>
+        // The cards are designed on a 1780 x 933 stage. Scale the stage so it fits the space next to the sidebar,
+        // the same way the other pages fit the screen.
+        const statsArea = document.querySelector('.statsarea');
+        const stage = document.querySelector('.stage');
+        function fitStage() {
+            const scale = Math.min(statsArea.clientWidth / 1780, statsArea.clientHeight / 933);
+            stage.style.transform = 'scale(' + scale + ')';
+            stage.style.left = (statsArea.clientWidth - 1780 * scale) / 2 + 'px';
+        }
+        fitStage();
+        window.addEventListener('resize', fitStage);
+    </script>
+    <script>
+        // Bar length = time between 1:45:00 and 2:30:00, so small gaps stay visible
+        const toSeconds = t => t.split(':').reduce((sum, part) => sum * 60 + Number(part), 0);
+        document.querySelectorAll('.bar').forEach(bar => {
+            const share = (toSeconds(bar.dataset.time) - toSeconds('1:45:00')) / (toSeconds('2:30:00') - toSeconds('1:45:00'));
+            bar.style.width = (share * 100).toFixed(1) + '%';
+        });
+    </script>
+    <!-- language button + "STARTS IN" countdown (#demo), same file as the other pages -->
+    <script src="language.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+
+:root {
+    --fadeblack: #222222;
+    --yellow: #FAE100;
+    --buttongray: #E5E5E5;
+    --bg: #F4F4F4;
+    --textgray: #444444;
+    --lightgray: #A1A1A1;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+
+    /*  SAME SIZES AS where.css / what.css (used by the header + sidebar)  */
+    --fs-xs: 0.625rem;
+  --fs-sm: 0.75rem;
+  --fs-md: 0.875rem;
+  --fs-lg: 1rem;
+  --fs-xl: 1.125rem;
+  --fs-xxl: 1.375rem;
+  --fs-xxxl: 1.75rem;
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 0.75rem;
+    --space-lg: 1rem;
+    --space-xl: 1.5rem;
+    --radius-sm: 0.75rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.5rem;
+    --radius-xl: 2rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Full screen like the other pages (where.css / what.css) */
+.kiosk {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--bg);
+    font-family: "Alexandria", sans-serif;
+    color: #000;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* ---------- FRAME, HEADER + SIDEBAR ----------
+   Copied from where.css / what.css so the statistics page looks the same as the other MARATHON pages */
+.bigframe {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    gap: var(--space-md);
+    grid-template-columns: 7rem 1fr 1fr;
+    grid-template-rows: 10% 66% auto;
+}
+
+/*  ALL THE TEXT  */
+.text1 {
+    font-size: var(--fs-xxl);
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+}
+
+.text2 {
+    color: #444;
+    font-size: var(--fs-xs);
+}
+
+.text3 {
+    color: #868686;
+    font-size: var(--fs-xs);
+    letter-spacing: 0.0625rem;
+}
+
+.text4 {
+    font-size: var(--fs-md);
+    font-weight: 600;
+}
+
+.text5 {
+    color: #868686;
+    font-size: var(--fs-xs);
+    letter-spacing: 0.0625rem;
+}
+
+.text6 {
+    color: #4F7637;
+    font-size: var(--fs-xl);
+    font-weight: 600;
+}
+
+/*  TOP INFO  */
+.topcontainer {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    grid-row: 1 / 1;
+    grid-column: 2 / 4;
+    padding-top: var(--space-md);
+    justify-content: space-between;
+    margin-right: var(--fs-md);
+}
+
+.backcontainer {
+    display: flex;
+    width: 4.8rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.backbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    padding: 0 var(--space-md);
+    font-weight: 600;
+    font-size: var(--fs-xs);
+    border-radius: var(--radius-xl);
+    background: var(--buttongray);
+    cursor: pointer;
+}
+
+/*  RACE DAY & STARTS IN TEXT */
+.racecontainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.line {
+    height: 3rem;
+}
+
+.racecontent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.08333rem;
+}
+
+.startcontainer {
+    display: flex;
+    align-items: center;
+    gap: 1.04167rem;
+}
+
+.startcontents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.08333rem;
+}
+
+/*  LANGUAGE BUTTON  */
+.buttoncontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttoncontents {
+    display: flex;
+    padding: 0.5rem 0.79167rem 0.54167rem 0.79167rem;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    gap: 0.66667rem;
+    border-radius: 2.5rem;
+    background: #E5E5E5;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.collabsible {
+    background-color: white;
+    border-radius: var(--radius-md);
+}
+
+.content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    min-width: 100%;
+    padding: var(--space-sm);
+    background: white;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+    z-index: 100;
+}
+
+.content.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: var(--space-sm);
+    border: none;
+    background: transparent;
+    text-align: left;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+}
+
+.language-option:hover {
+    background: #f2f2f2;
+}
+
+.icon {
+    width: 1.04167rem;
+    height: 1.04167rem;
+    aspect-ratio: 1/1;
+}
+
+/*  SIDEBAR  */
+.sidecontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+    padding: var(--fs-xs);
+    grid-column: 1;
+    grid-row: 1 / 4;
+    background-color: var(--fadeblack);
+}
+
+.transcontainer {
+    display: flex;
+    height: 4.16667rem;
+    margin-left: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.transicon {
+    width: 5rem;
+}
+
+.sideicon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.mapcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--fs-xxs);
+    color: #FFF;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.logocontainer {
+    display: flex;
+    height: 3.25rem;
+    align-items: center;
+}
+
+.logo {
+    width: 3rem;
+    height: auto;
+}
+
+.sidecontainer a {
+    text-decoration: none;
+}
+
+/* ---------- STATS AREA ----------
+   Cards + banner live on a 1780 x 933 stage, statistics.html scales it to fit this area */
+.statsarea {
+    position: relative;
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    margin: 0 var(--fs-md) var(--space-md) 0;
+    overflow: hidden;
+}
+
+.stage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1780px;
+    height: 933px;
+    transform-origin: top left;
+}
+
+/* ---------- CARDS ---------- */
+.card {
+    position: absolute;
+    top: 0;
+    height: 701px;
+    padding: 22px 24px 24px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.card-sub {
+    margin-top: -3px;
+    font-size: 16px;
+    color: var(--textgray);
+}
+
+.inner-card {
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: var(--shadow);
+}
+
+/* ---------- LEFT CARD: race in numbers ---------- */
+.numbers {
+    left: 0;
+    width: 760px;
+}
+
+.kpi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 3px;
+}
+
+.kpi {
+    height: 160px;
+    padding: 20px 24px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.kpi-number {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.kpi-label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.kpi-note {
+    font-size: 14px;
+    color: var(--textgray);
+}
+
+.kpi.dark {
+    background: var(--fadeblack);
+}
+
+.kpi.dark .kpi-number {
+    color: var(--yellow);
+}
+
+.kpi.dark .kpi-label {
+    color: #fff;
+}
+
+.kpi.dark .kpi-note {
+    color: var(--lightgray);
+}
+
+.who {
+    flex: 1;
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.who h3 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.who p {
+    font-size: 16px;
+    color: var(--textgray);
+}
+
+.split-bar {
+    display: flex;
+    height: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.split {
+    display: flex;
+    align-items: center;
+    padding-left: 22px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.split.danish {
+    background: var(--fadeblack);
+    color: #fff;
+}
+
+.split.international {
+    background: var(--yellow);
+}
+
+/* ---------- RIGHT CARD: records + facts ---------- */
+.records {
+    left: 784px;
+    width: 996px;
+    padding-right: 21px;
+}
+
+.card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-head .card-sub {
+    margin-top: 12px;
+}
+
+.chip {
+    padding: 12px 20px;
+    border-radius: 50px;
+    background: var(--buttongray);
+    color: var(--fadeblack);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.record-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 20px;
+}
+
+.code {
+    flex-shrink: 0;
+    width: 96px;
+    height: 56px;
+    border-radius: 14px;
+    background: var(--fadeblack);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.divider {
+    align-self: stretch;
+    width: 2px;
+    background: #000;
+}
+
+.bars {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bar-line {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.bar-label {
+    width: 130px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.track {
+    width: 360px;
+    height: 26px;
+    border-radius: 50px;
+    background: var(--bg);
+    overflow: hidden;
+}
+
+.bar {
+    display: block;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.bar.yellow {
+    background: var(--yellow);
+}
+
+.bar.grey {
+    background: var(--buttongray);
+}
+
+.bar-time {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.bar-note {
+    font-size: 14px;
+    color: var(--textgray);
+}
+
+.facts {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.fact {
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.accent {
+    width: 44px;
+    height: 8px;
+    border-radius: 4px;
+    background: var(--yellow);
+}
+
+.fact h3 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.fact p {
+    font-size: 15px;
+    line-height: 1.4;
+    color: var(--textgray);
+}
+
+/* ---------- BOTTOM BANNER ---------- */
+.banner {
+    position: absolute;
+    left: 0;
+    top: 720px;
+    width: 1780px;
+    height: 213px;
+    border-radius: 20px;
+    background: var(--fadeblack);
+    box-shadow: var(--shadow);
+    color: #fff;
+}
+
+.banner-text {
+    position: absolute;
+    left: 40px;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.banner-kicker {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.banner-number {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--yellow);
+}
+
+.banner-sub {
+    font-size: 20px;
+    color: var(--lightgray);
+}
+
+.earth {
+    position: absolute;
+    left: 860px;
+    top: 32px;
+}
+
+.earth-badge {
+    position: absolute;
+    left: 110px;
+    top: -12px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    background: var(--yellow);
+    color: #000;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.qr {
+    position: absolute;
+    left: 1230px;
+    top: 20px;
+    width: 173px;
+    height: 173px;
+    border-radius: 20px;
+    background: #fff;
+    border: 6px solid #fff;
+}
+
+.qr-text {
+    position: absolute;
+    left: 1434px;
+    top: 36px;
+    width: 240px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.phone {
+    position: absolute;
+    left: 1680px;
+    top: 69px;
+}

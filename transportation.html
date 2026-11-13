@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportation</title>
+    <link rel="stylesheet" href="transportationstyle.css">
+</head>
+
+<body class="body">
+    <main class="bigframe">
+        <section class="topcontainer">
+            <div class="backcontainer">
+                <button class="backbutton" onclick="history.back()">く Back</button>
+            </div>
+            <div class="titlecontainer">
+                <div class="titlecontent">
+                    <div class="text1">TRANSPORTATION</div>
+                    <div class="text2">Find the best way to get around durinng the event</div>
+                </div>
+            </div>
+            <div class="racecontainer">
+                <img class="line" src="images/line.svg">
+                <div class="racecontent">
+                    <div class="text3">RACE DAY</div>
+                    <div class="text4">May 9, 2027</div>
+                    <div class="text5">9:30 AM (CET)</div>
+                </div>
+            </div>
+            <div class="startcontainer">
+                <img class="line" src="images/line.svg">
+                <div class="startcontents">
+                    <div class="text3">STARTS IN</div>
+                    <div id="demo" class="text4"></div>
+                </div>
+            </div>
+            <div class="buttoncontainer">
+                <div class="dropdown">
+                    <button type="button" class="buttoncontents collapsible" id="languageButton">
+                        <img class="icon" src="images/languageicon.png">
+                        <div class="selected-language">English</div>
+                        <img class="arrow" src="images/arrow.svg">
+                    </button>
+                    <div class="content" id="languageMenu">
+                        <button class="language-option">🇩🇰 Danish</button>
+                        <button class="language-option">🇩🇪 German</button>
+                        <button class="language-option">🇪🇸 Spanish</button>
+                        <button class="language-option">🇵🇱 Polish</button>
+                        <button class="language-option">🇸🇰 Slovak</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sidecontainer">
+            <a href="main.html" class="logocontainer"><img class="logo" src="images/smalllogo.png"></a>
+            <div class="transcontainer">
+                <img class="transicon" src="images/transicon.png">
+            </div>
+            <a href="map.html" class="mapcontainer">
+                <img class="sideicon" src="images/whitemap.svg">
+                <div style="font-size: 0.75rem;">Map</div>
+            </a>
+            <a href="marathon.html" class="mapcontainer">
+                <img class="sideicon" src="images/whitemarathon.svg">
+                <div style="font-size: 0.75rem;">Marathon</div>
+            </a>
+        </section>
+        <section class="ptcontainer">
+            <div class="textcontainer">
+                <div class="text6">
+                    PUBLIC TRANSPORT NEAR YOU
+                </div>
+                <button class="refreshbutton">↻ Refresh</button>
+            </div>
+            <div class="rowcontainer">
+                <div class="iconcontainer">
+                    <img class="icons" src="images/train.png">
+                    M3
+                </div>
+                <div>
+                    <img class="line" src="images/line2.png">
+                </div>
+                <div class="textcontainer2">
+                    <div class="text7">Trianglen</div>
+                    <div class="text8">3 min walk (250m)</div>
+                    <div class="text8">Metro every 3 min</div>
+                </div>
+                <div class="verybusy">Very busy</div>
+                <button class="takemethere">Take me there ➥ </button>
+            </div>
+            <div class="rowcontainer">
+                <div class="iconcontainer">
+                    <img class="icons" src="images/train.png">
+                    M3
+                </div>
+                <div>
+                    <img class="line" src="images/line2.png">
+                </div>
+                <div class="textcontainer2">
+                    <div class="text7">Østerport</div>
+                    <div class="text8">5 min walk (400 m)</div>
+                    <div class="text8">Metro every 5 min</div>
+                </div>
+                <div class="notbusy">Not busy</div>
+                <button class="takemethere">Take me there ➥ </button>
+            </div>
+            <div class="rowcontainer">
+                <div class="iconcontainer">
+                    <img class="icons" src="images/metro.png">
+                    S
+                </div>
+                <div>
+                    <img class="line" src="images/line2.png">
+                </div>
+                <div class="textcontainer2">
+                    <div class="text7">Østerport</div>
+                    <div class="text8">2 min walk (150 m)</div>
+                    <div class="text8">Train every 10 min</div>
+                </div>
+                <div class="moderate">Moderate</div>
+                <button class="takemethere">Take me there ➥ </button>
+            </div>
+            <div class="rowcontainer">
+                <div class="iconcontainer">
+                    <img class="icons" src="images/bus.png">
+                    BUS
+                </div>
+                <div>
+                    <img class="line" src="images/line2.png">
+                </div>
+                <div class="textcontainer2">
+                    <div class="text7 a">Lines 1A, 14, 150S</div>
+                    <div class="text8 a">3 min walk (200 m)</div>
+                    <div class="text8 a">Buses every 6-10 min</div>
+                </div>
+                <div class="cancelled">Cancelled ⊘</div>
+                <div class="takemethere2">Take me there ➥ </div>
+            </div>
+            <div class="rowcontainer">
+                <div class="iconcontainer">
+                    <img class="icons" src="images/bike.png">
+                    BIKE
+                </div>
+                <div>
+                    <img class="line" src="images/line2.png">
+                </div>
+                <div class="textcontainer2">
+                    <div class="text7">Bikes</div>
+                    <div class="text8">6 min ride (1.8 km)</div>
+                    <div class="text8">Bike lanes avaible around the route</div>
+                </div>
+                <div class="notbusy">Low traffic</div>
+                <button class="takemethere">Take me there ➥ </button>
+            </div>
+        </section>
+        <section class="yahcontainer">
+            <div class="yahcontents">
+                <div class="yahtext">
+                    <div class="text9">YOU ARE HERE</div>
+                    <div class="locationcontainer">
+                        <img class="locationicon" src="images/location.png">
+                        <div class="text10">Rantzausgade 41-37, Nørrebro</div>
+                    </div>
+                </div>
+                <div class="empty"></div>
+                <a href="map.html">
+                    <button class="openfullmap">
+                        <div>Open full map</div>
+                        <img class="fullmapicon" src="images/opanfullmap.svg">
+                    </button>
+                </a>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d9529.911038457405!2d12.56231239994755!3d55.69316577820957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTXCsDQxJzExLjciTiAxMsKwMzInNTguMSJF!5e0!3m2!1spl!2sdk!4v1794164853540!5m2!1spl!2sdk"
+                display="block" loading="lazy"></iframe>
+            <div class="infocontainer">
+                <div class="zoominfo">
+                    <div class="text12">Zoom on the map to see the nearest stops</div>
+                    <img class="infoicons" src="images/zoomin.png">
+                </div>
+                <div class="clickinfo">
+                    <div class="text12">Or simply click on the location you want to go to to see avaible routes</div>
+                    <img class="infoicons" src="images/blacktouchicon.png">
+                </div>
+            </div>
+        </section>
+        <section class="ticketcontainer">
+            <div class="titlecontainer2">
+                <img class="ticket" src="images/ticket.svg">
+                <div class="textcontainer3">
+                    <div class="text11">PUBLIC TRANSPORT TICKETS</div>
+                    <div class="text12">There are special tickets for public transport (including tram, buses, metro)
+                        during the event</div>
+                </div>
+            </div>
+            <div class="ticketscontainter">
+                <div class="text11 text111">TICKETS:</div>
+                <div class="ticketsimages">
+                    <img class="tickets" src="images/smallticket.png">
+                    <img class="tickets" src="images/largeticket.png">
+                </div>
+            </div>
+            <img class="qrcode" src="images/qrcode.png">
+            <div class="scancontainer">
+                <div class="text13">SCAN THE QR CODE <br>
+                    to see avaible ticket options, including reduced price tickets during the event!
+                </div>
+            </div>
+            <div>
+                <img class="scanicon" src="images/scanicon.png">
+            </div>
+        </section>
+    </main>
+    <script src="language.js"></script>
+</body>
+
+</html>
